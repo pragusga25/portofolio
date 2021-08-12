@@ -1,5 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm test
-npm tsc
+# npx test
+npx tsc
+npx lint-staged
+# using yarn
+# yarn tsc 
