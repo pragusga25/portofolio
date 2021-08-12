@@ -7,6 +7,6 @@ module.exports = {
     return config;
   },
   eslint: {
-    dirs: ['pages', 'components', 'contexts', 'hooks', 'redux', 'utils', 'contants'],
+    dirs: ['src'],
   },
 };
