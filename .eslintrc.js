@@ -1,22 +1,25 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "next/core-web-vitals",
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+    'plugin:testing-library/react',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'next/core-web-vitals',
+    'next',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
+    project: './tsconfig.json',
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  plugins: ["react", "@typescript-eslint"],
-  rules: {},
+  rules: {
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+  },
 };

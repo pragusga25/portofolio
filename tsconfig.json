@@ -19,7 +19,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/Hello.spec.tsx.back"
+    "*.(ts|js)",
+    "next.config.js"
   ],
   "exclude": ["node_modules"]
 }
