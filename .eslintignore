@@ -1,1 +1,8 @@
-.eslintrc.js
+jest.config.js
+next.config.js
+*.css
+*.svg
+*.png
+*.jpg
+*.ico
+

@@ -14,7 +14,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: 'tsconfig.json',
     ecmaFeatures: {
       jsx: true,
     },
@@ -30,5 +30,10 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: 'tw|css' }],
+    'no-unused-vars': ['error', { varsIgnorePattern: 'tw|css' }],
   },
 };

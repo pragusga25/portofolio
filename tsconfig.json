@@ -13,14 +13,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "noUnusedLocals": true
+    "noUnusedLocals": false,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@redux/*": ["src/redux/*"],
+      "@styles/*": ["src/styles/*"],
+      "@contexts/*": ["src/contexts*"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "*.(ts|js)",
-    "next.config.js"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.(ts|js)", "next.config.js", "twin.d.ts"],
   "exclude": ["node_modules"]
 }
