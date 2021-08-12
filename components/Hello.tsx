@@ -1,1 +1,3 @@
-export const Hello = () => <div>Hello NextJS</div>;
+import { FC } from 'react';
+
+export const Hello: FC = () => <div>Hello NextJS</div>;

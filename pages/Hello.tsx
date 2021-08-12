@@ -1,12 +1,5 @@
-import React from 'react';
-import { Hello as Hi } from '../components/Hello';
+import { FC } from 'react';
 
-const Hello: React.FC = () => {
-  return (
-    <div>
-      <Hi />
-    </div>
-  );
-};
+const Hello: FC = () => <div>Hello</div>;
 
 export default Hello;
