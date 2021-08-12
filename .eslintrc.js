@@ -9,6 +9,8 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'next/core-web-vitals',
     'next',
+    'airbnb',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,7 +21,9 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  plugins: ['prettier'],
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'prettier/prettier': ['error'],
   },
 };
