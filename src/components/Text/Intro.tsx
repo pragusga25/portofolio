@@ -19,8 +19,8 @@ const Intro = () => {
         <span tw="text-4xl">
           I'm a{' '}
           <Typewriter
-            words={['Computer Science Student', 'Web Developer']}
-            loop={5}
+            words={['Computer Science Student', 'Web Developer', 'Tech Enthusiast']}
+            loop={0}
             cursor
             cursorStyle="_"
             typeSpeed={100}
