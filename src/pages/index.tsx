@@ -1,17 +1,34 @@
 import { FC, useState } from 'react';
 import tw, { css } from 'twin.macro';
+import Navbar from '@components/Navbar';
+import { useTransition, animated } from 'react-spring';
+import { pages, Pages } from 'src/constants';
 
-const Home: FC = () => {
-  const [red, setRed] = useState<boolean>(false);
+const Index: FC = () => {
+  const [page, setPage] = useState<Pages>('home');
+
+  const transition = useTransition(page, {
+    from: { x: 10000, opacity: 0 },
+    enter: { x: 0, opacity: 1 },
+    leave: { x: -10000, opacity: 0 },
+  });
 
   return (
     <div
-      tw="h-screen w-full flex justify-center items-center"
-      onClick={() => setRed((prev) => !prev)}
+      css={[tw`font-sans min-h-screen min-w-full overflow-hidden relative`, pages[page].bgColor]}
     >
-      <h1 css={[red && tw`text-red-600 text-xl`]}>NEXT.JS BOILERPLATE</h1>
+      <Navbar setPage={setPage} page={page} />
+      {transition((style, item) => (
+        <animated.div
+          style={style}
+          key={pages[page].id}
+          css={[tw`text-2xl text-white w-full`, pages[item].bgColor]}
+        >
+          {page === pages[item].id ? pages[item].page : null}
+        </animated.div>
+      ))}
     </div>
   );
 };
 
-export default Home;
+export default Index;

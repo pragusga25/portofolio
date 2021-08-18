@@ -35,5 +35,13 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: 'tw|css' }],
     'no-unused-vars': ['error', { varsIgnorePattern: 'tw|css' }],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
+    'react/no-unescaped-entities': 'off',
+    'import/extensions': 'off',
+    'import/no-cycle': 'off',
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
   },
 };
