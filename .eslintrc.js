@@ -43,5 +43,6 @@ module.exports = {
     'react/prop-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'react/button-has-type': 'off',
   },
 };
