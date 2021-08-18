@@ -10,6 +10,15 @@ import Man from './Man';
 const CodingMan = () => {
   const [toggle, setToggle] = useState(false);
   const { width } = useWindowSize();
+  let svgWidth = 973;
+
+  if (width) {
+    if (width > 1000) {
+      svgWidth = width * 0.4;
+    } else {
+      svgWidth = width * 0.8;
+    }
+  }
 
   useEffect(() => {
     setTimeout(() => setToggle(true), 0);
@@ -20,8 +29,9 @@ const CodingMan = () => {
       xmlns="http://www.w3.org/2000/svg"
       // width="973.461"
       // width="800"
-      width={width ? width * 0.32 : 700}
-      height="587.025"
+      width={svgWidth}
+      // height="587.025"
+
       data-name="Layer 1"
       viewBox="0 0 973.461 587.025"
     >

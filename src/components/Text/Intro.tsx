@@ -14,9 +14,9 @@ const Intro = () => {
   return (
     <div css={[introStyles]}>
       <h1>
-        <span tw="text-4xl">Hello {greets}</span> <br />
-        <span tw="text-6xl leading-normal">I'm Taufik Pragusga</span> <br />
-        <span tw="text-4xl">
+        <span tw="text-lg md:text-4xl">Hello {greets}</span> <br />
+        <span tw="text-3xl md:text-6xl leading-normal">I'm Taufik Pragusga</span> <br />
+        <span tw="text-2xl md:text-4xl">
           I'm a{' '}
           <Typewriter
             words={['Computer Science Student', 'Web Developer', 'Tech Enthusiast']}
